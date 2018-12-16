@@ -1,116 +1,110 @@
 
-const BankOne = [{
-
-    keyCode: 81,
-    keyTrigger: 'Q',
-    id: 'Heater-1',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
-  }, {
-    keyCode: 87,
-    keyTrigger: 'W',
-    id: 'Heater-2',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
-  }, {
-    keyCode: 69,
-    keyTrigger: 'E',
-    id: 'Heater-3',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
-  }, {
-    keyCode: 65,
-    keyTrigger: 'A',
-    id: 'Heater-4',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
-  }, {
-    keyCode: 83,
-    keyTrigger: 'S',
-    id: 'Clap',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
-  }, {
-    keyCode: 68,
-    keyTrigger: 'D',
-    id: 'Open-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
-  }, {
-    keyCode: 90,
-    keyTrigger: 'Z',
-    id: "Kick-n'-Hat",
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
-  }, {
-    keyCode: 88,
-    keyTrigger: 'X',
-    id: 'Kick',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
-  }, {
-    keyCode: 67,
-    keyTrigger: 'C',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
-  },
-  ];
-  
-const BankTwo = [{
-  
-    keyCode: 81,
-    keyTrigger: 'Q',
-    id: 'Chord-1',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3'
-  }, {
-    keyCode: 87,
-    keyTrigger: 'W',
-    id: 'Chord-2',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3'
-  }, {
-    keyCode: 69,
-    keyTrigger: 'E',
-    id: 'Chord-3',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3'
-  }, {
-    keyCode: 65,
-    keyTrigger: 'A',
-    id: 'Shaker',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3'
-  }, {
-    keyCode: 83,
-    keyTrigger: 'S',
-    id: 'Open-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3'
-  }, {
-    keyCode: 68,
-    keyTrigger: 'D',
-    id: 'Closed-HH',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3'
-  }, {
-    keyCode: 90,
-    keyTrigger: 'Z',
-    id: 'Punchy-Kick',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'
-  }, {
-    keyCode: 88,
-    keyTrigger: 'X',
-    id: 'Side-Stick',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
-  }, {
-    keyCode: 67,
-    keyTrigger: 'C',
-    id: 'Snare',
-    url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
-  }];
-var test = 'test'
-
-console.log(test)
-console.log(BankOne)
-console.log(Object.entries(BankOne))
-function handleClick() {
+var x = document.querySelectorAll('.drum-pad')
+console.log(x)
+playSound = () => {
+  document.addEventListener("keydown", function (event) {
+    let keyTrigger = event.key.toString().toUpperCase()
+    const sound = document.getElementById(keyTrigger)
+    sound.currentTime = 0;
+    sound.play()
+    switch (event.keyCode) {
+      case 81:
+        display.textContent = x[0].id
+        break
+      case 87:
+        display.textContent = x[1].id
+        break
+      case 69:
+        display.textContent = x[2].id
+        break
+      case 65:
+        display.textContent = x[3].id
+        break
+      case 83:
+        display.textContent = x[4].id
+        break
+      case 68:
+        display.textContent = x[5].id
+        break
+      case 90:
+        display.textContent = x[6].id
+        break
+      case 88:
+        display.textContent = x[7].id
+        break
+      case 67:
+        display.textContent = x[8].id
+        break
+    }
+  })
+}
+heater1 = () => {
+  var sound = document.getElementById('Q')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Heater 1'
 
 }
- //switch statement for keys //
+heater2 = () => {
+  var sound = document.getElementById('W')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Heater-2'
+
+}
+heater3 = () => {
+  var sound = document.getElementById('E')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Heater-3'
+
+}
+heater4 = () => {
+  var sound = document.getElementById('A')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Heater-4'
+
+}
+clap = () => {
+  var sound = document.getElementById('S')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Clap'
+
+}
+openHH = () => {
+  var sound = document.getElementById('D')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Open-HH'
+
+}
+kickNHat = () => {
+  var sound = document.getElementById('Z')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Kick n Hat'
+
+}
+kick = () => {
+  var sound = document.getElementById('X')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Kick'
+}
+closedHH = () => {
+  var sound = document.getElementById('C')
+  sound.currentTime = 0
+  sound.play();
+  display.textContent = 'Closed-HH'
+
+}
+
+
+var bank = 'heater-kit'
+//switch statement for keys //
 function handleKeyPress(event) {
-    document.addEventListener("keydown", function (event) {
-        const keyName = event.key
-            console.log(keyName)
-            display.textContent = BankOne[0].id
-        
-    })
+  playSound()
 }
-
 handleKeyPress()

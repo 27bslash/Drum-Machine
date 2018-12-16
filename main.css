@@ -14,8 +14,7 @@ body {
 #drum-machine {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'title title'
-                         'left right';
+    grid-template-areas: 'title title' 'left right';
     width: 800px;
     height: 500px;
     background-color: rgba(201, 196, 196, 0.993);
@@ -35,13 +34,11 @@ body {
     grid-area: left;
     border-right: solid 2px black;
     border-top: solid 2px black;
-
     height: 100%;
     width: 100%;
-
 }
 
-#buttons {
+#drum-pads {
     padding: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -49,18 +46,22 @@ body {
 }
 
 .drum-pad {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+     cursor: pointer;
     padding: 5px;
     font-size: 1.5em;
     width: 100%;
+    height: 100%;
 }
 
 #right {
     border-top: solid 2px black;
-
     grid-area: right;
     display: grid;
-    grid-template-areas: 'display display display'
-    'control control control';
+    grid-template-areas: 'display display display' 'control control control';
     height: 100%;
     width: 100%;
     grid-column-start: 2;
@@ -90,9 +91,8 @@ body {
     align-items: center;
 }
 
-#power-switch{
-}
-#volume-control{
-}
-#bank-switch {
-}
+#power-switch {}
+
+#volume-control {}
+
+#bank-switch {}
