@@ -18,7 +18,7 @@ body {
     width: 800px;
     height: 500px;
     background-color: rgba(201, 196, 196, 0.993);
-    border: solid green;
+    border: solid white;
     border-radius: 5px;
 }
 
@@ -50,11 +50,15 @@ body {
     background-color: #fff;
     justify-content: center;
     align-items: center;
-     cursor: pointer;
+    cursor: pointer;
+    border-radius: 5px;
     padding: 5px;
     font-size: 1.5em;
     width: 100%;
     height: 100%;
+}
+.drum-pad:hover {
+    opacity: 0.9
 }
 
 #right {
@@ -79,20 +83,3 @@ body {
     align-self: center;
     font-size: 2.3em;
 }
-
-#controls {
-    grid-area: control;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    height: 50%;
-    background-color: red;
-    justify-items: center;
-    align-items: center;
-}
-
-#power-switch {}
-
-#volume-control {}
-
-#bank-switch {}
